@@ -14,23 +14,23 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Caselli Laudo</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
     <div class="container">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Caselli Laudo</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
         <form>
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -60,6 +60,7 @@
                 </div>
                 <!-- Checkboxes -->
                 <div class="col-md-2">
+                    <hr>
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="customCheck1">
                         <label class="custom-control-label" for="customCheck1">CASA</label>
@@ -91,6 +92,7 @@
                     </div>
                 </div>
                 <div class="col-md-2">
+                    <hr>
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="customCheck2">
                         <label class="custom-control-label" for="customCheck2">APARTAMENTO</label>
@@ -110,6 +112,7 @@
                     </div>
                 </div>
                 <div class="col-md-2">
+                    <hr>
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="customCheck3">
                         <label class="custom-control-label" for="customCheck3">COBERTURA</label>
@@ -129,6 +132,7 @@
                     </div>
                 </div>
                 <div class="col-md-2">
+                    <hr>
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="customCheck4">
                         <label class="custom-control-label" for="customCheck4">TERRENO</label>
@@ -148,6 +152,7 @@
                     </div>
                 </div>
                 <div class="col-md-2">
+                    <hr>
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="customCheck5">
                         <label class="custom-control-label" for="customCheck5">COMERCIAL</label>
@@ -191,12 +196,76 @@
                 <div class="col-md-2">
                     <div class="form-group">
                         <label for="inputConst">Idade da construção</label>
-                        <input type="number" class="form-control" id="inputConst" placeholder="Digite o valor">
+                        <input type="number" class="form-control" id="inputConst" placeholder="Digite a idade">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <label class="" for="inlineFormCustomSelectPref">Possui habita-se?</label>
+                    <select class="custom-select" id="inlineFormCustomSelectPref">
+                        <option value="1">Sim</option>
+                        <option value="2">Não</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="inputconstru">Construtora</label>
+                        <input type="text" class="form-control" id="inputconstru"
+                            placeholder="Digite o nome da construtora">
+                    </div>
+                </div>
+                <div class="">
+                    <div class="form-group">
+                        <label for="inputdes">Prazo para desocupação</label>
+                        <input type="number" class="form-control" id="inputdes" placeholder="Digite o prazo">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="inputdes">Prazo para desocupação</label>
+                        <input type="number" class="form-control" id="inputdes" placeholder="Digite o prazo">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="inputdes">Valor do IPTU</label>
+                        <input type="number" class="form-control" id="inputdes" placeholder="Digite o valor">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="inputconstru">Ocupante</label>
+                        <input type="text" class="form-control" id="inputconstru" placeholder="">
                     </div>
                 </div>
             </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="exampleFormControlTextarea1">Descrição geral de cômodos: </label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="Digite aqui"></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+
+                <div class="form-group col-md-4">
+                    <label for="inputdes">Tipo de fachada</label>
+                    <input type="number" class="form-control" id="inputdes" placeholder="Digite o tipo">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputdes">Tamanho do terreno</label>
+                    <input type="number" class="form-control" id="inputdes" placeholder="Digite o tamanho">
+                </div>
+                <div class="col-md-4">
+                    <label class="" for="inlineFormCustomSelectPref">Casa em centro de terreno?</label>
+                    <select class="custom-select" id="inlineFormCustomSelectPref">
+                        <option value="1">Sim</option>
+                        <option value="2">Não</option>
+                    </select>
+                </div>
+
+            </div>
             <button type="submit" class="btn btn-primary">Sign in</button>
-    </form>
+        </form>
     </div>
 
 
