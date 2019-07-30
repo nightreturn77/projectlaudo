@@ -249,7 +249,7 @@
 
                 <div class="form-group col-md-4">
                     <label for="inputdes">Tipo de fachada</label>
-                    <input type="number" class="form-control" id="inputdes" placeholder="Digite o tipo">
+                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o tipo">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="inputdes">Tamanho do terreno</label>
@@ -262,8 +262,105 @@
                         <option value="2">Não</option>
                     </select>
                 </div>
+                <div class="form-group col-md-4">
+                    <label for="inputdes">Nº de vagas Descobertas</label>
+                    <input type="number" class="form-control" id="inputdes" placeholder="Digite o tamanho">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputdes">Nº de vagas Cobertas</label>
+                    <input type="number" class="form-control" id="inputdes" placeholder="Digite o tamanho">
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="exampleFormControlTextarea1">Itens de lazer: </label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="Digite aqui"></textarea>
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="exampleFormControlTextarea1">Beneficios do Condomínio: </label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="Digite aqui"></textarea>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <hr>
+                <p class="text-center">DOCUMENTAÇÃO</p>
+                <hr>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputdes">Título</label>
+                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputdes">RGI</label>
+                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputdes">Planta</label>
+                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputdes">Inscrição IPTU</label>
+                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputdes">CEDAE</label>
+                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputdes">TX INCENDIO</label>
+                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                </div>
 
             </div>
+            <div class="col-md-12">
+                <hr>
+                <p class="text-center">DADOS DO PROPRIETÁRIO</p>
+                <hr>
+            </div>
+            <div class="form-row">
+            <div class="form-group col-md-4">
+                    <label for="inputdes">Nome</label>
+                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputdes">Endereço Residencial</label>
+                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputdes">Endereço Comercial</label>
+                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputdes">Tel:</label>
+                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputdes">Tel 2:</label>
+                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputdes">Chaves com</label>
+                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                </div> 
+                <div class="form-group col-md-4">
+                    <label for="inputdes">Preço solicitado pelo proprietário</label>
+                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                </div> 
+                <div class="form-group col-md-4">
+                    <label for="inputdes">Avaliação</label>
+                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                </div> 
+                <div class="form-group col-md-4">
+                    <label for="inputdes">DATA</label>
+                    <input type="date" class="form-control" id="inputdes" placeholder="Digite o título">
+                </div> 
+                <div class="form-group col-md-4">
+                    <label for="inputdes">Corretor</label>
+                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                </div> 
+            </div>
+
             <button type="submit" class="btn btn-primary">Sign in</button>
         </form>
     </div>
