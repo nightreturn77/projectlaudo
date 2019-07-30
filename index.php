@@ -31,32 +31,34 @@
                 </div>
             </nav>
         </header>
-        <form>
+        <!-- Fim das Header -->
+
+        <form method="post" action="cadastrar.php">
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputBairro">Bairro</label>
-                    <input type="text" class="form-control" id="inputBairo" placeholder="ex: Realengo">
+                    <input type="text" name="bairro" class="form-control" id="inputBairo" placeholder="ex: Realengo">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputCod">Código</label>
-                    <input type="number" class="form-control" id="inputCod" placeholder="Digite o código">
+                    <input type="number" name="codigo" class="form-control" id="inputCod" placeholder="Digite o código">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputAddress">Endereço</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="ex: Travessa Coxim, 55">
+                    <input type="text" name="logradouro" class="form-control" id="inputAddress" placeholder="ex: Travessa Coxim, 55">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputAddress2">Ponto de Referência</label>
-                    <input type="text" class="form-control" id="inputAddress2"
+                    <input type="text" name="referencia" class="form-control" id="inputAddress2"
                         placeholder="ex: Próximo ao banco do Brasil">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputCond">Condomínio</label>
-                    <input type="text" class="form-control" id="inputCond">
+                    <input type="text" name="condominio" class="form-control" id="inputCond">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputEdi">Edifício</label>
-                    <input type="text" class="form-control" id="inputEdi">
+                    <input type="text" name="edificio" class="form-control" id="inputEdi">
                 </div>
                 <!-- Checkboxes -->
                 <div class="col-md-2">
@@ -180,7 +182,7 @@
                     <p class="text-center">INFORMAÇÕES GERAIS</p>
                     <hr>
                 </div>
-                <div>
+                <div class=" col-md-2">
                     <label class="" for="inlineFormCustomSelectPref">Em ocupação</label>
                     <select class="custom-select" id="inlineFormCustomSelectPref">
                         <option value="1">Sim</option>
@@ -213,47 +215,33 @@
                             placeholder="Digite o nome da construtora">
                     </div>
                 </div>
-                <div class="">
-                    <div class="form-group">
-                        <label for="inputdes">Prazo para desocupação</label>
-                        <input type="number" class="form-control" id="inputdes" placeholder="Digite o prazo">
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="form-group">
-                        <label for="inputdes">Prazo para desocupação</label>
-                        <input type="number" class="form-control" id="inputdes" placeholder="Digite o prazo">
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="form-group">
-                        <label for="inputdes">Valor do IPTU</label>
-                        <input type="number" class="form-control" id="inputdes" placeholder="Digite o valor">
-                    </div>
-                </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="inputconstru">Ocupante</label>
-                        <input type="text" class="form-control" id="inputconstru" placeholder="">
+                        <label for="inputvar">Valor do IPTU</label>
+                        <input type="number" class="form-control" id="inputvar" placeholder="Digite o valor">
                     </div>
                 </div>
-            </div>
-            <div class="form-row">
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="inputinsciptu">Inscrição do IPTU</label>
+                        <input type="number" class="form-control" id="inputinsciptu" placeholder="Digite a inscrição">
+                    </div>
+                </div>
+            
                 <div class="form-group col-md-12">
                     <label for="exampleFormControlTextarea1">Descrição geral de cômodos: </label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
                         placeholder="Digite aqui"></textarea>
                 </div>
-            </div>
             <div class="form-row">
 
                 <div class="form-group col-md-4">
                     <label for="inputdes">Tipo de fachada</label>
-                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o tipo">
+                    <input type="text" class="form-control" id="inputdes" placeholder="">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="inputdes">Tamanho do terreno</label>
-                    <input type="number" class="form-control" id="inputdes" placeholder="Digite o tamanho">
+                    <input type="number" class="form-control" id="inputdes" placeholder="">
                 </div>
                 <div class="col-md-4">
                     <label class="" for="inlineFormCustomSelectPref">Casa em centro de terreno?</label>
@@ -264,11 +252,11 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputdes">Nº de vagas Descobertas</label>
-                    <input type="number" class="form-control" id="inputdes" placeholder="Digite o tamanho">
+                    <input type="number" class="form-control" id="inputdes" placeholder="">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputdes">Nº de vagas Cobertas</label>
-                    <input type="number" class="form-control" id="inputdes" placeholder="Digite o tamanho">
+                    <input type="number" class="form-control" id="inputdes" placeholder="">
                 </div>
                 <div class="form-group col-md-12">
                     <label for="exampleFormControlTextarea1">Itens de lazer: </label>
@@ -289,27 +277,23 @@
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="inputdes">Título</label>
-                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                    <input type="text" class="form-control" id="inputdes" placeholder="">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputdes">RGI</label>
-                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                    <input type="text" class="form-control" id="inputdes" placeholder="">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputdes">Planta</label>
-                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="inputdes">Inscrição IPTU</label>
-                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                    <input type="text" class="form-control" id="inputdes" placeholder="">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputdes">CEDAE</label>
-                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                    <input type="text" class="form-control" id="inputdes" placeholder="">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputdes">TX INCENDIO</label>
-                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                    <input type="text" class="form-control" id="inputdes" placeholder="">
                 </div>
 
             </div>
@@ -321,47 +305,47 @@
             <div class="form-row">
             <div class="form-group col-md-4">
                     <label for="inputdes">Nome</label>
-                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                    <input type="text" name="nomeProp" class="form-control" id="inputdes" placeholder="Digite o nome do proprietário">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputdes">Endereço Residencial</label>
-                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                    <input type="text" name="endResidencial" class="form-control" id="inputdes" placeholder="ex: Rua Silva Cardoso">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputdes">Endereço Comercial</label>
-                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                    <input type="text"  name="endComercial" class="form-control" id="inputdes" placeholder="Rua Silva Cardoso">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputdes">Tel:</label>
-                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                    <input type="text" name="tel1" class="form-control" id="inputdes" placeholder="ex: 2135558585">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputdes">Tel 2:</label>
-                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                    <input type="text"name="te2" class="form-control" id="inputdes" placeholder="ex: 2135558585">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputdes">Chaves com</label>
-                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                    <input type="text" name="chaves" class="form-control" id="inputdes" placeholder="">
                 </div> 
                 <div class="form-group col-md-4">
                     <label for="inputdes">Preço solicitado pelo proprietário</label>
-                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                    <input type="number" name="preco"class="form-control" id="inputdes" placeholder="Digite o preço">
                 </div> 
                 <div class="form-group col-md-4">
                     <label for="inputdes">Avaliação</label>
-                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                    <input type="text" name="avaliacao" class="form-control" id="inputdes" placeholder="">
                 </div> 
                 <div class="form-group col-md-4">
                     <label for="inputdes">DATA</label>
-                    <input type="date" class="form-control" id="inputdes" placeholder="Digite o título">
+                    <input type="date" name="dataProp"class="form-control" id="inputdes" placeholder="">
                 </div> 
                 <div class="form-group col-md-4">
                     <label for="inputdes">Corretor</label>
-                    <input type="text" class="form-control" id="inputdes" placeholder="Digite o título">
+                    <input type="text" name="nomeCorretor"class="form-control" id="inputdes" placeholder="Digite o nome do corretor">
                 </div> 
             </div>
 
-            <button type="submit" class="btn btn-primary">Sign in</button>
+            <button type="submit" class="btn btn-primary" name="cadastrar">Gerar Laudo</button>
         </form>
     </div>
 
