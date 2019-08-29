@@ -75,23 +75,23 @@
                         <label class="custom-control-label" for="customCheckc1">Linear</label>
                     </div>
                     <div class="custom-control custom-checkbox">
-                        <input type="checkbox" value="Frente" name='c2' class="custom-control-input" id="customCheckc2">
+                        <input type="checkbox" value="Frente"  name='c2' class="custom-control-input" id="customCheckc2">
                         <label class="custom-control-label" for="customCheckc2">Frente</label>
                     </div>
                     <div class="custom-control custom-checkbox">
-                        <input type="checkbox" value="Duplex" name='c3' class="custom-control-input" id="customCheckc3">
+                        <input type="checkbox" value="Duplex"  name='c3' class="custom-control-input" id="customCheckc3">
                         <label class="custom-control-label" for="customCheckc3">Duplex</label>
                     </div>
                     <div class="custom-control custom-checkbox">
-                        <input type="checkbox" value="Vila" name='c4' class="custom-control-input" id="customCheckc4">
+                        <input type="checkbox" value="Vila"  name='c4' class="custom-control-input" id="customCheckc4">
                         <label class="custom-control-label" for="customCheckc4">Vila</label>
                     </div>
                     <div class="custom-control custom-checkbox">
-                        <input type="checkbox" value="Triplex" name='c5' class="custom-control-input" id="customCheckc5">
+                        <input type="checkbox" value="Triplex"  name='c5' class="custom-control-input" id="customCheckc5">
                         <label class="custom-control-label" for="customCheckc5">Triplex</label>
                     </div>
                     <div class="custom-control custom-checkbox">
-                        <input type="checkbox" value="Cond." name='c6' class="custom-control-input" id="customCheckc6">
+                        <input type="checkbox" value="Cond."  name='c6' class="custom-control-input" id="customCheckc6">
                         <label class="custom-control-label" for="customCheckc6">Cond.</label>
                     </div>
                 </div>

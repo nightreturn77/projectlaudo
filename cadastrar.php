@@ -19,14 +19,57 @@ $com = $_POST['endComercial'];
 $chaves = $_POST['chaves'];
 $avaliacao = $_POST['avaliacao'];
 $tipo = $_POST['tipo'];
-$c1 = $_POST['c1'];
-$c2 = $_POST['c2'];
-$c3 = $_POST['c3'];
-$c4 = $_POST['c4'];
-$c5 = $_POST['c5'];
-$c6 = $_POST['c6'];
+$c1 = $_POST['c1'] = ( isset($_POST['c1']) ) ? true : null; 
+$c2 = $_POST['c2'] = ( isset($_POST['c2']) ) ? true : null; 
+$c3 = $_POST['c3'] = ( isset($_POST['c3']) ) ? true : null; 
+$c4 = $_POST['c4'] = ( isset($_POST['c4']) ) ? true : null; 
+$c5 = $_POST['c5'] = ( isset($_POST['c5']) ) ? true : null; 
+$c6 = $_POST['c6'] = ( isset($_POST['c6']) ) ? true : null; 
 $lazer = $_POST['lazer'];
 $idIg = "";
+
+
+if($tipo == "CASA"){ 
+    $tratarCaracter = 1;
+}else if($tipo == "APARTAMENTO"){
+    $tratarCaracter = 2;
+} else if($tipo == "TERRENO"){ 
+    $tratarCaracter = 3; 
+}else{ 
+    $tratarCaracter = 4;
+}
+
+switch($tratarCaracter){ 
+case 1: 
+$c1 = "Linear";
+$c2 = "Frente";
+$c3 = "Duplex";
+$c4 = "Vila";
+$c5 = "Triplex";
+$c6 = "Cond.";
+break;
+case 2:
+$c1 = "Padrão";
+$c2 = "Duplex";
+$c3 = "Cobertura";
+break;
+case 3:
+$c1 = "Uni - Familiar";
+$c1 = "Bi - Familiar";
+$c1 = "Multi - Familiar";
+break;
+case 4:
+$c1 = "Frente";
+$c2 = "Jirau";
+$c3 = "Galeria";
+$c4 = "Loja";
+$c5 = "Sala";
+$c6 = "Galpão";
+break;
+
+}
+
+
 
 include('connection.php');
 
@@ -37,7 +80,6 @@ if(mysqli_query($con, $queryinfoGerais)){
     $consultId = mysqli_query($con, $queryId); 
     $arrayId = mysqli_fetch_array($consultId); 
    $idIg = $arrayId['idIg'];
-   echo $idIg;
    
    }else{ 
    echo "not ok info gerais";
@@ -55,11 +97,8 @@ chaves,avaliacao,idPredio) values('$nomeProp','$nomeCorretor','$tel1','$tel2','$
 
 
 if(mysqli_query($con, $queryCaracter)){ 
-    echo "passou aqui";
     if(mysqli_query($con, $queryEnd)){ 
-        echo "passou aqui";
         if(mysqli_query($con, $queryProp)){ 
-            echo "passou aqui";
         }else{ 
             echo "not ok";
         }
@@ -82,7 +121,6 @@ if(mysqli_query($con, $queryCaracter)){
 
 
 }
-
 
 
 ?>
