@@ -1,37 +1,8 @@
-<!doctype html>
-<html lang="pt-br">
+<?php 
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+include('header.php');
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <title>Laudo Imob</title>
-</head>
-
-<body>
-    <div class="container">
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">Caselli Laudo</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <!-- Fim das Header -->
+?>
 
         <form method="post" action="cadastrar.php">
             <div class="form-row">
@@ -178,8 +149,8 @@
                 <div class=" col-md-2">
                     <label class="" for="inlineFormCustomSelectPref">Em ocupação</label>
                     <select name="ocupacao" class="custom-select" id="inlineFormCustomSelectPref">
-                        <option value="1">Sim</option>
-                        <option value="2">Não</option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
                     </select>
                 </div>
                 <div class=" col-md-2">
@@ -191,7 +162,7 @@
                 <div class="col-md-2">
                     <div class="form-group">
                         <label for="inputConst">Idade da construção</label>
-                        <input name="idadeConst" type="number" class="form-control" id="inputConst" placeholder="Digite a idade">
+                        <input name="idadeConst" type="date" class="form-control" id="inputConst" placeholder="Digite a idade">
                     </div>
                 </div>
                 <div class="col-md-2">
@@ -239,8 +210,8 @@
                     <div class="col-md-4">
                         <label class="" for="inlineFormCustomSelectPref">Casa em centro de terreno?</label>
                         <select name="centroTerreno" class="custom-select" id="inlineFormCustomSelectPref">
-                            <option value="1">Sim</option>
-                            <option value="2">Não</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
                         </select>
                     </div>
                     <div class="form-group col-md-4">
@@ -269,24 +240,32 @@
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-4">
-                        <label for="inputdes">Título</label>
-                        <input type="text" class="form-control" id="inputdes" placeholder="">
-                    </div>
+                        <label for="titulo">Título</label>
+                        <select name="titulo" class="custom-select" id="titulo">
+                            <option value="Compra e venda">Compra e Venda</option>
+                            <option value="Promessa de compra e venda">Promessa de compra e venda</option>
+                            <option value="Sessão de direitos aquisitivos">Sessão de direitos aquisitivos</option>
+                            <option value="Promessa de sessão de direitos aquisitivos">Promessa de sessão de direitos aquisitivos</option>
+                            <option value="Compra, venda e sessão">Compra, venda e sessão</option>
+                            <option value="Dação em pagamento">Dação em pagamento</option>
+                            <option value="Doação">Doação</option>
+                            <option value="Instrumento particular de compra e venda">Instrumento particular de compra e venda</option>
+                        </select>                    </div>
                     <div class="form-group col-md-4">
                         <label for="inputdes">RGI</label>
-                        <input type="text" class="form-control" id="inputdes" placeholder="">
+                        <input type="text" class="form-control" name="rgi" id="inputdes" placeholder="">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputdes">Planta</label>
-                        <input type="text" class="form-control" id="inputdes" placeholder="">
+                        <input type="text" class="form-control" name="planta" id="inputdes" placeholder="">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputdes">CEDAE</label>
-                        <input type="text" class="form-control" id="inputdes" placeholder="">
+                        <input type="text" class="form-control" name="cedae" id="inputdes" placeholder="">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputdes">TX INCENDIO</label>
-                        <input type="text" class="form-control" id="inputdes" placeholder="">
+                        <input type="text" class="form-control" name="txIncendio" id="inputdes" placeholder="">
                     </div>
 
                 </div>
@@ -320,9 +299,11 @@
                         <input type="text" name="tel2" class="form-control" id="inputdes" placeholder="ex: 2135558585">
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="inputdes">Chaves com</label>
-                        <input type="text" name="chaves" class="form-control" id="inputdes" placeholder="">
-                    </div>
+                        <label for="chaves">Chaves com</label>
+                        <select name="chaves" class="custom-select" id="chaves">
+                            <option value="Proprietário">Proprietário</option>
+                            <option value="Escritório">Escritório</option>
+                        </select>                    </div>
                     <div class="form-group col-md-4">
                         <label for="inputdes">Preço solicitado pelo proprietário</label>
                         <input type="number" name="preco" class="form-control" id="inputdes"
@@ -337,9 +318,11 @@
                         <input type="date" name="dataProp" class="form-control" id="inputdes" placeholder="">
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="inputdes">Corretor</label>
-                        <input type="text" name="nomeCorretor" class="form-control" id="inputdes"
-                            placeholder="Digite o nome do corretor">
+                        <label for="corretor">Corretor</label>
+                        <select name="nomeCorretor" class="custom-select" id="corretor">
+                            <option value="Marcos">Marcos</option>
+                            <option value="Empresa">Empresa</option>
+                        </select>
                     </div>
                 </div>
 
@@ -356,18 +339,10 @@
     </div>
 
 
+    <?php 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-</body>
+    include('footer.php');
 
-</html>
+
+
+    ?> 
